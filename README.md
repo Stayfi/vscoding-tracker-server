@@ -29,7 +29,7 @@ Command to use the token file
     volumes:
       - "/home/server/vscoding-tracker-server/database:/app/database"
       - "/home/server/vscoding-tracker-server/conf:/app/conf"
-    command: "node app --token-file /app/conf/coding-tracker-tokens.json"
+    command: "--token-file /app/conf/coding-tracker-tokens.json"
 ```
 
 Token file example 1:
