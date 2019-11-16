@@ -1,17 +1,17 @@
-FROM node:10
+FROM node:10-alpine
 
 WORKDIR /tmp
 
-RUN curl -OL "https://github.com/hangxingliu/vscode-coding-tracker-server/archive/master.zip" \
+RUN wget "https://github.com/stayfi/vscode-coding-tracker-server/archive/master.zip" \
     && unzip master.zip \
     && mv vscode-coding-tracker-server-master /app \
     && rm /tmp/master.zip
 
 WORKDIR /app
 
-RUN npm i
+RUN npm install
 
-RUN npm audit fix
+RUN npm cache clean --force
 
 EXPOSE 10345
 
