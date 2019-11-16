@@ -2,10 +2,10 @@ FROM node:10-alpine
 
 WORKDIR /tmp
 
-RUN wget "https://github.com/stayfi/vscode-coding-tracker-server/archive/master.zip" \
-    && unzip master.zip \
-    && mv vscode-coding-tracker-server-master /app \
-    && rm /tmp/master.zip
+RUN wget "https://github.com/stayfi/vscode-coding-tracker-server/archive/develop.zip" \
+    && unzip develop.zip \
+    && mv vscode-coding-tracker-server-develop /app \
+    && rm /tmp/develop.zip
 
 WORKDIR /app
 
