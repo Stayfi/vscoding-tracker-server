@@ -9,9 +9,7 @@ RUN wget "https://github.com/stayfi/vscode-coding-tracker-server/archive/develop
 
 WORKDIR /app
 
-RUN npm install
-
-RUN npm cache clean --force
+RUN npm install && npm cache clean --force
 
 EXPOSE 10345
 
